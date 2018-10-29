@@ -1,0 +1,57 @@
+﻿<Page
+    x:Class="FormStudent.View.RegisterMember"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:FormStudent.View"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <RelativePanel>
+            <StackPanel x:ConnectionId='2' x:Name="Member" Margin="20">
+                <TextBox x:ConnectionId='20' x:Name="FirtName" Header= "Firt Name"                             PlaceholderText="Firt Name" Margin="0,24,0,0" MaxLength="320" Width="300" HorizontalAlignment="Left" />
+                <TextBlock x:ConnectionId='21' x:Name="firstName" Foreground="Red" Visibility="Collapsed" ></TextBlock>
+                <TextBox x:ConnectionId='22' x:Name="LastName" Header="Last Name"  PlaceholderText="Last Name" Margin="0,8,0,0" MaxLength="50" Width="300" HorizontalAlignment="Left"  />
+                <TextBlock x:ConnectionId='23' x:Name="lastName" Foreground="Red" Visibility="Collapsed"></TextBlock>
+                <TextBox x:ConnectionId='24' x:Name="Phone" Header="Phone" PlaceholderText="Phone" Margin="0,8,0,0" MaxLength="50" Width="300" HorizontalAlignment="Left" />
+                <TextBlock x:ConnectionId='25' x:Name="phone" Foreground="Red" Visibility="Collapsed"></TextBlock>
+                <TextBox x:ConnectionId='26' x:Name="Address" AcceptsReturn="True" Header="Address" PlaceholderText="Address" Margin="0,8,0,0" MaxLength="50" Height="100" Width="300" HorizontalAlignment="Left" />
+                <TextBlock x:ConnectionId='27' x:Name="address" Foreground="Red" Visibility="Collapsed"></TextBlock>
+            </StackPanel>
+            <StackPanel x:ConnectionId='3'  Margin="20,20,20,0" x:Name="Account" RelativePanel.RightOf="Member">
+                <TextBox x:ConnectionId='8' x:Name="Email" Header="Email" PlaceholderText="Email" Margin="0,24,0,0" MaxLength="50" Width="300" HorizontalAlignment="Left" />
+                <TextBlock x:ConnectionId='9' x:Name="email" Visibility="Collapsed" Foreground="Red"></TextBlock>
+                <PasswordBox x:ConnectionId='10' x:Name="Password" Header="Password" PlaceholderText="Password" Margin="0,8,0,0" MaxLength="50" Width="300" HorizontalAlignment="Left" />
+                <TextBlock x:ConnectionId='11' x:Name="password" Visibility="Collapsed" Foreground="Red"></TextBlock>
+                <TextBox x:ConnectionId='12' x:Name="Introduction" AcceptsReturn="True" Height="100" Header="Introduction" PlaceholderText="Introduction" Margin="0,8,0,0" MaxLength="50" Width="300" HorizontalAlignment="Left" />
+                <TextBlock x:ConnectionId='13' x:Name="IntroductionError" Visibility="Collapsed" Foreground="Red"></TextBlock>
+                <TextBlock Text="Gender"></TextBlock>
+                <StackPanel Orientation="Horizontal">
+                    <RadioButton x:ConnectionId='17' Content="Male" Tag="1"                              />
+                    <RadioButton x:ConnectionId='18' Content="Female" Tag="0"                              />
+                    <RadioButton x:ConnectionId='19' Content="Orther" Tag="2" IsChecked="True"                              />
+                </StackPanel>
+                <StackPanel Orientation="Vertical">
+                    <TextBlock x:ConnectionId='16' Margin="80,30,0,0" x:Name="Text_Success" Visibility="Collapsed" Foreground="Green"></TextBlock>
+                </StackPanel>
+
+                <StackPanel Margin="80,30,0,0" Orientation="Horizontal">
+                    
+                    <Button x:ConnectionId='14' x:Name="btn_submit" Content="Register"  Margin="0,0,50,0"                  ></Button>
+                    <Button x:ConnectionId='15' x:Name="btn_Reset" Content="Reset"                 ></Button>
+                </StackPanel>
+            </StackPanel>
+
+            <StackPanel  Margin="0,20,20,20" RelativePanel.RightOf="Account" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                <CalendarDatePicker x:ConnectionId='4' Margin="0,20,0,10" x:Name="Birthday" Header="Birthday"                               />
+                <TextBox x:ConnectionId='5' x:Name="AvatarURL" Visibility="Collapsed" Header="Avatar" PlaceholderText="Avatar" Margin="0,24,0,0" MaxLength="50" Width="300" HorizontalAlignment="Left" />
+                <Image x:ConnectionId='6' x:Name="Avatar" Width="150" Height="100" Margin="20,0,20,0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+
+                <Button x:ConnectionId='7' Content="Create Image"                   ></Button>
+            </StackPanel>
+        </RelativePanel>
+    </Grid>
+</Page>
+

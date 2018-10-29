@@ -1,0 +1,30 @@
+﻿<Page
+    x:Class="FormStudent.View.MyAccount"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:FormStudent.View"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:entity="using:FormStudent.Entity"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <StackPanel>
+            <ListView ItemsSource="{x:Bind listAccount}" x:Name="MyListSong">
+                <ListView.ItemTemplate>
+                    <DataTemplate x:DataType="entity:Member">
+                        <StackPanel Margin="0, 0, 0, 10" Orientation="Horizontal"  Tag="{Binding}"  Width="300" >
+
+                            <StackPanel Margin="10,15,0,0">
+                                <TextBlock Text="{x:Bind firstName}" Style="{ThemeResource BaseTextBlockStyle}"/>
+                                <TextBlock Text="{x:Bind lastName}" Style="{ThemeResource BaseTextBlockStyle}"/>
+                            </StackPanel>
+
+                        </StackPanel>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackPanel>
+    </Grid>
+</Page>

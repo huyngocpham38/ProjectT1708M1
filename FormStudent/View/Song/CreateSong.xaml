@@ -1,0 +1,26 @@
+﻿<Page
+    x:Class="FormStudent.View.CreateSong"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:FormStudent.View"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" Height="1141">
+
+    <Grid>
+        <Pivot>
+            <PivotItem>
+                <StackPanel Orientation="Vertical">
+                    <TextBox x:Name="Name" Header="Name" PlaceholderText="Name" ></TextBox>
+                    <TextBox x:Name="Singer" Header="Singer" PlaceholderText="Singer" ></TextBox>
+                    <TextBox x:Name="Description" Header="Description" PlaceholderText="Description" ></TextBox>
+                    <TextBox x:Name="Thumbnail" Header="Thumbnail" PlaceholderText="Thumbnail" ></TextBox>
+                    <TextBox x:Name="Link" Header="Link" PlaceholderText="Link" ></TextBox>
+                    <TextBox x:Name="Author" Header="Author" PlaceholderText="Author" ></TextBox>
+                    <Button x:Name="btnSave" Content="Submit" Click="btn_Save" ></Button>
+                </StackPanel>
+            </PivotItem>
+        </Pivot>
+    </Grid>
+</Page>
